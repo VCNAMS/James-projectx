@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jajabie 💜</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(rgba(75,0,110,0.6), rgba(75,0,110,0.6)),
+    url('https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    animation:bgPulse 1.2s ease-in-out infinite alternate;
+    transition:opacity 2s ease;
+}
+
+@keyframes bgPulse{
+    0%{filter:brightness(1);} 
+    50%{filter:brightness(1.25);} 
+    100%{filter:brightness(1);} 
+}
+
+/* Intro */
+.intro{
+    position:absolute;width:100%;height:100%;
+    display:flex;justify-content:center;align-items:center;
+    background:#3b0764;color:white;
+    font-size:40px;font-family:'Playfair Display',serif;
+    animation:fadeIntro 3s forwards;z-index:10;
+}
+@keyframes fadeIntro{0%{opacity:1;}80%{opacity:1;}100%{opacity:0;visibility:hidden;}}
+
+/* Folder */
+.folder{width:240px;height:150px;background:#b57edc;border-radius:12px;
+position:relative;cursor:pointer;box-shadow:0 15px 40px rgba(0,0,0,0.4);
+display:flex;justify-content:center;align-items:center;color:white;font-weight:600;
+perspective:1000px;}
+.folder-top{position:absolute;top:-25px;left:30px;width:100px;height:30px;
+background:#e9d5ff;border-radius:8px 8px 0 0;transform-origin:bottom;
+transition:transform 0.6s ease;}
+.folder.open .folder-top{transform:rotateX(-120deg);} 
+
+/* Letter */
+.letter-container{position:absolute;width:100%;height:100%;display:none;
+justify-content:center;align-items:center;backdrop-filter:blur(6px);} 
+.letter{width:520px;max-width:92%;background:rgb(255, 255, 255);padding:45px;border-radius:20px;
+box-shadow:0 25px 60px rgba(0,0,0,0.5);} 
+.letter h2{font-family:'Playfair Display',serif;color:#7e22ce;margin-bottom:20px;text-align:center;} 
+.letter p{font-size:15.5px;line-height:1.8;color:#333;min-height:200px;white-space:pre-line;} 
+.close-btn{margin-top:25px;padding:9px 20px;border:none;background:#a855f7;
+color:white;border-radius:8px;cursor:pointer;display:block;margin-left:auto;margin-right:auto;} 
+
+/* Magical Heart Sparkle */
+.sparkle{
+    position:absolute;
+    width:12px;height:12px;
+    pointer-events:none;
+    transform:rotate(45deg);
+    animation:heartFloat 1s ease-out forwards, heartBeat 1.2s ease-in-out infinite;
+}
+.sparkle::before,.sparkle::after{
+    content:"";
+    position:absolute;width:12px;height:12px;
+    background:inherit;border-radius:50%;
+}
+.sparkle::before{top:-6px;left:0;} 
+.sparkle::after{left:-6px;top:0;} 
+
+@keyframes heartFloat{
+    0%{opacity:1;transform:translate(0,0) rotate(45deg) scale(0.8);} 
+    50%{transform:translate(10px,-15px) rotate(90deg) scale(1);} 
+    100%{opacity:0;transform:translate(-15px,-35px) rotate(180deg) scale(0.6);} 
+}
+@keyframes heartBeat{0%,100%{filter:brightness(1);}50%{filter:brightness(1.6);} }
+
+/* 💖 Heart Burst */
+@keyframes burst{
+    to{transform:translate(var(--x), var(--y)) scale(0.5);opacity:0;}
+}
+
+/* 🌌 Background Music Reactive Particles */
+.bg-particle{
+    position:absolute;width:8px;height:8px;border-radius:50%;
+    background:rgba(255,255,255,0.5);
+    pointer-events:none;
+    transition:transform 0.2s ease;
+}
+/* ===== Mobile Optimization ===== */
+@media (max-width: 768px){
+    .signature {font-size: 1.4rem;}
+    .slideshow img {max-width: 95%;}
+}
+/* 🎁 Final Fade */
+.fade-out{opacity:0;}
+
+</style>
+</head>
+<body>
+
+<div class="intro">For Janneal...</div>
+
+<audio id="heartbeat" loop>
+<source src="heartbeat.mp3" type="audio/mpeg">
+</audio>
+
+<div class="folder" id="folder" onclick="openLetter()">
+<div class="folder-top"></div>
+Click to Open 💜
+</div>
+
+<div class="letter-container" id="letterBox">
+<div class="letter">
+<h2>Dear Janneal / Jajabie 💜</h2>
+<p id="typedText"></p>
+<div class="surprise" id="surpriseMsg" style="display:none;text-align:center;margin-top:15px;font-weight:600;color:#7e22ce;">
+HAPPY BIRTHDAY JAJABIE🎉☺️✨, Thank you for being part of life. Thank you for being there for me. I know sometimes off ko sa akong mga actions, 
+but i just want you to feel special, because you're special to me. I may not be the perfect guy to make you feel that way, but I know you deserve it. 
+You deserve to be loved and cared for. I made some mistakes in the past especially the day that hurt you. I should've treated you better back then and
+I'm sorry for that gud Janneal. I know It's been months since we talked, and it felt like forever, and I really wish and pray that we could have some time to talk about us.
+I really love talking to you especially kung mag yap sa akoa. I really do love it. I really hope you won't change- i adore your cuteness, beauty, sweetness, your smile, your eyes, and YOU. 
+May your special day be memorable for you Jajabie. HAPPY BIRTHDAY JAJABIE ✨☺️🎉💜
+</div>
+<button class="close-btn" onclick="endExperience()">Finish 💜</button>
+</div>
+</div>
+
+<script>
+const message = `HAPPY BIRTHDAY JAJABIE 🎉☺️✨\n\nYou deserve to be loved and cared for.
+\nHAPPY BIRTHDAY JAJABIE ✨☺️🎉`;
+
+let index=0;
+let hueShift=280;
+
+function openLetter(){
+ document.getElementById('folder').classList.add('open');
+ document.getElementById('heartbeat').play();
+ setTimeout(()=>{
+  document.getElementById('letterBox').style.display='flex';
+  typeWriter();
+ },600);
+}
+
+function typeWriter(){
+ if(index < message.length){
+  document.getElementById('typedText').innerHTML += message.charAt(index);
+  index++;
+  setTimeout(typeWriter,30);
+ } else {
+  document.getElementById('surpriseMsg').style.display='block';
+ }
+}
+
+/* 💫 Sparkle Hearts with Beat Sync */
+document.addEventListener('mousemove', e=>{
+ const sparkle=document.createElement('div');
+ sparkle.className='sparkle';
+ hueShift+=3;if(hueShift>330)hueShift=280;
+ sparkle.style.background=`hsl(${hueShift},80%,75%)`;
+ sparkle.style.left=e.pageX+'px';
+ sparkle.style.top=e.pageY+'px';
+ document.body.appendChild(sparkle);
+ setTimeout(()=>sparkle.remove(),1000);
+});
+
+/* 💖 Heart Burst on Click */
+document.addEventListener('click', e=>{
+ for(let i=0;i<8;i++){
+  const heart=document.createElement('div');
+  heart.className='sparkle';
+  heart.style.background='pink';
+  heart.style.left=e.pageX+'px';
+  heart.style.top=e.pageY+'px';
+  heart.style.setProperty('--x',(Math.random()*100-50)+'px');
+  heart.style.setProperty('--y',(Math.random()*100-50)+'px');
+  heart.style.animation='burst 0.8s forwards';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),800);
+ }
+});
+
+/* 🌌 Music Reactive Background Particles */
+for(let i=0;i<25;i++){
+ const p=document.createElement('div');
+ p.className='bg-particle';
+ p.style.left=Math.random()*100+'vw';
+ p.style.top=Math.random()*100+'vh';
+ document.body.appendChild(p);
+}
+
+setInterval(()=>{
+ document.querySelectorAll('.bg-particle').forEach(p=>{
+  const scale=1+Math.random()*0.8;
+  p.style.transform=`scale(${scale})`;
+ });
+},300);
+
+/* 🎁 Cinematic Ending */
+function endExperience(){
+ document.body.classList.add('fade-out');
+ setTimeout(()=>{
+  document.body.innerHTML='<div style="color:white;font-size:40px;font-family:Playfair Display,serif;">Forever Yours 💜</div>';
+ },2000);
+}
+
+</script>
+
+</body>
+</html>
